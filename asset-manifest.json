@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/digitekniikat/static/css/main.e6c13ad2.css",
+    "main.js": "/digitekniikat/static/js/main.3537e137.js",
+    "static/js/787.34caa215.chunk.js": "/digitekniikat/static/js/787.34caa215.chunk.js",
+    "static/media/logo.svg": "/digitekniikat/static/media/logo.3be2630a2bb3162c07032348b7655750.svg",
+    "index.html": "/digitekniikat/index.html",
+    "main.e6c13ad2.css.map": "/digitekniikat/static/css/main.e6c13ad2.css.map",
+    "main.3537e137.js.map": "/digitekniikat/static/js/main.3537e137.js.map",
+    "787.34caa215.chunk.js.map": "/digitekniikat/static/js/787.34caa215.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.3537e137.js"
+  ]
+}
