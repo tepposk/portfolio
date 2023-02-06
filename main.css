@@ -52,7 +52,7 @@ nav li a {
 
 nav li :hover {
     color: white;
-    background-color: black;
+    background-color: #313131;
 }
 
 .content {
@@ -118,6 +118,7 @@ h2 {
     font-size: 2em;
     text-align: left;
     margin: 5% 0;
+    color: #313131;
 }
 
 #returnBtn {
