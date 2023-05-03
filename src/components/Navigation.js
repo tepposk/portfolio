@@ -6,25 +6,26 @@ import Logo from "../images/logo.svg";
 function Navigation() {
 
 
-/*     const [value, setValue] = useState(0);
-
-    const handleChange = (e, val) => {
-        setValue(val);
-    }; */
+    /*     const [value, setValue] = useState(0);
+    
+        const handleChange = (e, val) => {
+            setValue(val);
+        }; */
 
     return (
         <div>
             <nav>
-                <ul /* value={value} onChange={handleChange} */ >
-                    <input type="image" src={Logo} id="logo" alt="logo" to="home" />
+                <Link to="home"><input type="image" src={Logo} id="logo" alt="logo" to="home" /></Link>
+                <ul className="ul" /* value={value} onChange={handleChange} */ >
+
                     <li>
-                        <Link to="about">about</Link>
+                        <Link to="/about">about</Link>
                     </li>
                     <li>
-                        <Link to="projects">projects</Link>
+                        <Link to="/projects">projects</Link>
                     </li>
                     <li>
-                        <Link to="contact">contact</Link>
+                        <Link to="/contact">contact</Link>
                     </li>
                 </ul>
             </nav>

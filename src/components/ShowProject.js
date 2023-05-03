@@ -7,6 +7,7 @@ function ShowProject(props) {
     let { id } = useParams();
     let paragraph = props.projects[id].paragraph;
 
+    // Workaround to get line breaks working in the text from Firebase
     const updatedParagraph = paragraph.split("rivinvaihto").map((item, key) => {
         return <span key={key}>{item}<br/><br/></span>
     });
