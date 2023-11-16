@@ -23,14 +23,6 @@ body {
     overflow-x: hidden;
 }
 
-/* .pageContent {
-    background-color: #f0f0f0;
-}
-
-.pageContent:nth-child(even) {
-    background-color: #cbcbcb;
-} */
-
 #loadingContainer {
     position: absolute;
     top: 0;
