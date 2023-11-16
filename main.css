@@ -182,10 +182,14 @@ h3 {
 @media (max-width: 768px) {
 
     .sectionContent {
-        min-height: 40vh;
+        min-height: max(40vh, 300px);
     }
 
     .sectionContent, .iconWrapper {
         margin: 0 8%;
+    }
+
+    .toTopWrapper {
+        bottom: 20px;
     }
 }

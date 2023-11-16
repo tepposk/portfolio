@@ -238,6 +238,7 @@ label div:nth-child(2) {
     bottom: 30px;
     right: 37px;
     text-align: right;
+    margin-bottom: 40px;
 }
 
 .someIcons {
