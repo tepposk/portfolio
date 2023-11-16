@@ -1,0 +1,368 @@
+#heroWrapper {
+    min-height: 80vh;
+    width: 100vw;
+    margin: 0;
+    text-align: center;
+}
+
+/* #heroPlaceholder {
+    position: absolute;
+    width: 1000px;
+    opacity: 20%;
+    left: 0;
+    top: -10px;
+    display: none;
+} */
+
+.reloadIcon {
+    position: absolute;
+    right: 4%;
+    top: 0;
+    height: 40px;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    transition-delay: 2s;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.reloadIcon-hide {
+    opacity: 0;
+    transform: rotate(-720deg);
+}
+
+.heroBackground {
+    margin: 0 auto;
+    background-image: radial-gradient(circle 60vh at 50% 150%, #cbcbcb, #f0f0f0);
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    transition: width 2s ease-in-out, opacity 0.2s ease-in-out;
+    z-index: 0;
+}
+
+.heroBackground-hide {
+    width: 1vw;
+    z-index: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+#heroContent {
+    position: relative;
+    height: 480px;
+    width: 100vw;
+    /* max-width: 1000px; */
+    overflow: hidden;
+}
+
+#heroTextArea {
+    height: 100%;
+    width: 30%;
+    position: absolute;
+    left: 20%;
+    bottom: 0;
+    text-align: left;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#heroTextArea h2 {
+    position: relative;
+    font-family: 'Roboto Mono', monospace;
+    color: #202c37;
+    font-size: 3.4em;
+    line-height: 1em;
+    font-weight: 700;
+    padding-top: 6%;
+    width: 150%;
+}
+
+#narrowerMargin {
+    margin: 5%;
+}
+
+.h1 {
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    color: #313131;
+    font-size: 1.4em;
+    font-weight: 700;
+    width: 85%;
+    height: auto;
+    transition: transform 0.6s ease-out, opacity 1.7s ease;
+    transition-delay: 1.7s;
+}
+
+.h1-hide {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+.h1 a {
+    text-decoration: none;
+}
+
+h1 .highlight {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    color: #ba6149;
+}
+
+h1 .highlight:hover {
+    color: #bd4324;
+    cursor: pointer;
+}
+
+
+.heroParagraph {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.4em;
+    color: #313131;
+    margin: 2% 0;
+}
+
+.buttonArea {
+    transition: transform 0.7s ease-out, opacity 1.7s ease;
+    transition-delay: 1.9s;
+}
+.buttonArea-hide {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+.heroButton {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #ba6149;
+    padding: 0.5em 1em;
+    margin-top: 2%;
+    user-select: none;
+    transition: transform 1.2s ease-out, opacity 1s ease-out;
+    transition-delay: 2.8s;
+}
+
+.heroButton:hover {
+    background-color: #bd4324;
+    cursor: pointer;
+    transition: none;
+    transition-delay: 0s;
+}
+
+#imagesContainer {
+    width: 30%;
+    overflow-y: hidden;
+}
+
+.heroImagery {
+    pointer-events: none;
+    user-select: none;
+    margin-right: 17%;
+}
+
+.teppo {
+    position: absolute;
+    width: 15%;
+    max-width: 250px;
+    min-width: 210px;
+    right: 8%;
+    bottom: 0;
+    z-index: 4;
+    transition: all 1s ease-in-out;
+    transition-delay: 0.7s;
+}
+
+.teppo-hide {
+    transform: translateY(30%) rotate(7deg);
+    filter: blur(10px);
+    opacity: 0;
+}
+
+.devIcon1 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 150px;
+    color: #ba6149;
+    position: absolute;
+    bottom: 2%;
+    right: -3%;
+    z-index: 3;
+    transition: transform 1.4s ease-out, filter 1s ease, opacity 1.6s ease-in-out;
+    transition-delay: 0.9s;
+    filter: blur(0.5px);
+    transform: rotate(4deg);
+}
+
+.devIcon1-hide {
+    transform: translateY(100%) translateX(-70%) rotate(-20deg);
+    filter: blur(10px);
+    opacity: 0;
+}
+
+.devIcon2 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 110px;
+    color: #202c37;
+    position: absolute;
+    right: 8%;
+    bottom: 50%;
+    transform: rotate(-10deg);
+    z-index: 2;
+    transition: all 1.2s ease-in-out, opacity 1.6s ease-in-out;
+    transition-delay: 0.8s;
+    filter: blur(0.5px);
+}
+
+.devIcon2-hide {
+    transform: translateY(150%) rotate(20deg);
+    opacity: 0;
+    filter: blur(15px);
+}
+
+.square1 {
+    max-width: 400px;
+    min-width: 340px;
+    width: 28%;
+    position: absolute;
+    bottom: 0;
+    right: 4%;
+    z-index: 2;
+    transition: all 0.8s ease-in-out;
+    transition-delay: 0.8s;
+    filter: blur(1px);
+}
+
+.square1-hide {
+    transform: scale(3) translateX(200%) translateY(-100%);
+    filter: blur(10px);
+}
+
+.square2 {
+    max-width: 380px;
+    min-width: 330px;
+    width: 30%;
+    position: absolute;
+    transform: rotate(-30deg) translateX(0%);
+    bottom: 0;
+    right: 8%;
+    z-index: 1;
+    transition: all 1.4s ease-in-out;
+    filter: blur(1.5px);
+    transition-delay: 0.3s;
+}
+
+.square2-hide {
+    transform: scale(0.05) translateX(-2000%) translateY(50%);
+    filter: blur(30px);
+    opacity: 0;
+}
+
+.no-transition {
+    transition: none;
+}
+
+@media (max-width: 1200px) {
+    #heroContent {
+        width: 100%;
+    }
+
+    .reloadIcon {
+        right: 5%;
+        top: 3%;
+    }
+
+    #heroTextArea {
+        width: 40%;
+        left: 10%;
+    }
+
+    #heroTextArea h2 {
+
+        font-size: 3em;
+    }
+
+    #heroButton {
+        font-size: 1.2em;
+    }
+
+    .heroImagery {
+        margin-right: 5%;
+    }
+
+    .devIcon1 {
+        right: -10px;
+        font-size: 130px;
+    }
+
+    #devIcon {
+        font-size: calc(100px + 5vw);
+    }
+}
+
+@media (max-width: 768px) {
+    #heroContent {
+        height: calc(100vh - 120px);
+        /* height of #topNavi */
+        margin-left: 1vw;
+    }
+
+    .reloadIcon {
+        right: 10%;
+        top: 10%;
+    }
+
+    #heroTextArea {
+        position: relative;
+        height: 80%;
+        width: 50%;
+        left: 5%;
+    }
+
+    #heroTextArea h2 {
+        font-size: 2.5em;
+    }
+
+    h1 {
+        font-size: 1em;
+    }
+
+    .heroParagraph {
+        font-size: 1.2em;
+    }
+
+    .heroImagery {
+        margin-right: 0%;
+
+    }
+
+    .teppo {
+        min-width: 190px;
+        right: -20px;
+    }
+
+    .devIcon1 {
+        font-size: 120px;
+        right: 80px;
+        bottom: 50px;
+        transform: rotate(10deg);
+    }
+
+    .devIcon2 {
+        right: 15px;
+        bottom: 45%;
+    }
+
+    .square1 {
+        right: -80px;
+    }
+
+    .square2 {
+        right: -40px;
+        bottom: -50px;
+    }
+}
