@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.e6c13ad2.css",
-    "main.js": "/portfolio/static/js/main.89bed3f6.js",
+    "main.js": "/portfolio/static/js/main.cc743991.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/teppo_placeholder.png": "/portfolio/static/media/teppo_placeholder.e55448547f80bda47e60.png",
     "static/media/logo.svg": "/portfolio/static/media/logo.a3f9f38fdcdb4d7367c48fd6e4290ad7.svg",
@@ -15,11 +15,11 @@
     "static/media/loading.svg": "/portfolio/static/media/loading.9f59f14c2c34baae83b5e6be00377d9a.svg",
     "static/media/blue_square.svg": "/portfolio/static/media/blue_square.33d7a28e11fc9e91062817e45e27dd9f.svg",
     "main.e6c13ad2.css.map": "/portfolio/static/css/main.e6c13ad2.css.map",
-    "main.89bed3f6.js.map": "/portfolio/static/js/main.89bed3f6.js.map",
+    "main.cc743991.js.map": "/portfolio/static/js/main.cc743991.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.89bed3f6.js"
+    "static/js/main.cc743991.js"
   ]
 }

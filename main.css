@@ -83,12 +83,10 @@ h3 {
     text-decoration: none;
 }
 
-.externalIconWrapper {
-    display: inline;
-}
-
-.externalIcon {
+#externalIcon {
     height: 1em;
+    margin: 0 5px;
+    transform: translateY(2px);
 }
 
 .sectionContent {
@@ -127,11 +125,6 @@ h3 {
     width: 40px;
 }
 
-
-.contactIcon:hover {
-    filter: contrast(250%) saturate(60%);
-}
-
 .paragraph-animation {
     opacity: 1;
     transform: translateY(0px);
@@ -155,7 +148,6 @@ h3 {
 }
 
 .toTopWrapper:hover {
-
     filter: contrast(250%) saturate(60%);
 }
 
