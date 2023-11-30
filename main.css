@@ -48,8 +48,8 @@ body {
     min-height: 40vh;
 }
 
-.h3Wrapper {
-    background-color: #202c37;
+/* .h3Wrapper {
+    background-color: #2f3e4c;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -61,13 +61,34 @@ body {
     transform: translateX(-100%);
     -webkit-user-drag: none;
     user-select: none;
-}
+} */
 
-.h3-animation {
-    transform: translateX(0%);
+.h3Wrapper {
+    background-color: #2f3e4c;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 20%;
+    height: 3em;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+    position: absolute;
+    transform: translateX(-100%);
+    -webkit-user-drag: none;
+    user-select: none;
     transition: transform 0.2s ease-out;
     transition-delay: 0.2s;
 }
+
+    .h3-animation {
+        transform: translateX(0%);
+    }
+
+/* .h3-animation {
+    transform: translateX(0%);
+    transition: transform 0.2s ease-out;
+    transition-delay: 0.2s;
+} */
 
 h3 {
     font-family: 'Roboto Mono', monospace;
@@ -89,11 +110,18 @@ h3 {
     transform: translateY(2px);
 }
 
-.sectionContent {
+/* .sectionContent {
     max-width: 850px;
     margin: 0 25%;
     opacity: 0;
     transform: translateY(max(30px, 15%));
+} */
+
+.sectionContent {
+    max-width: 850px;
+    margin: 0 25%;
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 .sectionContent a:hover {
@@ -125,9 +153,15 @@ h3 {
     width: 40px;
 }
 
-.paragraph-animation {
+/* .paragraph-animation {
     opacity: 1;
     transform: translateY(0px);
+    transition: opacity 1.7s ease, transform 0.7s ease-in-out;
+} */
+
+.paragraph-animation {
+    opacity: 0;
+    transform: translateY(max(30px, 15%));
     transition: opacity 1.7s ease, transform 0.7s ease-in-out;
 }
 
@@ -159,9 +193,13 @@ h3 {
     height: 100%;
 }
 
+::selection {
+    background-color: #f8dfb6;
+}
+
 @media (max-width: 1200px) {
 
-    .sectionContent, .iconWrapper {
+    .sectionContent {
         margin: 0 16%;
     }
 
@@ -177,7 +215,7 @@ h3 {
         min-height: max(40vh, 300px);
     }
 
-    .sectionContent, .iconWrapper {
+    .sectionContent {
         margin: 0 8%;
     }
 

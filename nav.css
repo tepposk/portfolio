@@ -22,7 +22,7 @@ nav {
 
 #burgerMenu {
     display: none;
-    z-index: 5;
+    z-index: 6;
 }
 
 nav ul li {
@@ -34,7 +34,7 @@ nav ul li {
 }
 
 nav li .navButton {
-    color: #202c37;
+    color: #2F3E4C;
     position: relative;
     padding: 10px;
     text-decoration: none;
@@ -50,7 +50,7 @@ nav li .navButton::before {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #202c37;
+    background-color: #2F3E4C;
     z-index: -1;
     transform: scaleY(0);
     transform-origin: top;
@@ -128,7 +128,7 @@ label div {
     position: relative;
     top: 0;
     height: 12px;
-    background-color: #202c37;
+    background-color: #2F3E4C;
     margin-bottom: 12px;
     transition: 0.6s ease transform, 0.6s ease top, 0.6s ease width,
         0.6s ease right;
@@ -175,11 +175,11 @@ label div:nth-child(2) {
     display: flex;
     height: 100vh;
     width: 100%;
-    background-color: #202c37;
+    background-color: #2F3E4C;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 5;
+    z-index: 6;
     transform: translatex(100%);
     transition: transform 0.4s ease-in-out;
 }

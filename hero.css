@@ -1,3 +1,4 @@
+
 #heroWrapper {
     min-height: 80vh;
     width: 100vw;
@@ -62,7 +63,7 @@
     left: 20%;
     bottom: 0;
     text-align: left;
-    z-index: 4;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -71,7 +72,7 @@
 #heroTextArea h2 {
     position: relative;
     font-family: 'Roboto Mono', monospace;
-    color: #202c37;
+    color: #2F3E4C;
     font-size: 3.4em;
     line-height: 1em;
     font-weight: 700;
@@ -128,6 +129,7 @@ h1 .highlight:hover {
     transition: transform 0.7s ease-out, opacity 1.7s ease;
     transition-delay: 1.9s;
 }
+
 .buttonArea-hide {
     transform: translateY(-20px);
     opacity: 0;
@@ -207,7 +209,7 @@ h1 .highlight:hover {
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
     font-size: 110px;
-    color: #202c37;
+    color: #2F3E4C;
     position: absolute;
     right: 8%;
     bottom: 50%;
@@ -267,6 +269,11 @@ h1 .highlight:hover {
 }
 
 @media (max-width: 1200px) {
+
+    #heroWrapper {
+        min-height: 85vh;
+    }
+
     #heroContent {
         width: 100%;
     }
@@ -305,26 +312,54 @@ h1 .highlight:hover {
 }
 
 @media (max-width: 768px) {
+
     #heroContent {
-        height: calc(100vh - 120px);
+        height: calc(95vh - 120px);
         /* height of #topNavi */
-        margin-left: 1vw;
+        margin: 0 auto;
+        position: relative;
+        padding: 0;
+        display: block;
+    }
+
+    .heroBackground {
+        /* background-image: radial-gradient(circle 0vh at 50% 150%, #cbcbcb, #f0f0f0); */
+        background-image: radial-gradient(circle at 50% 200%, #cbcbcb, #f0f0f0);
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
     }
 
     .reloadIcon {
         right: 10%;
         top: 10%;
+        display: none;
     }
 
     #heroTextArea {
         position: relative;
-        height: 80%;
-        width: 50%;
-        left: 5%;
+        height: auto;
+        width: 88%;
+        padding: 3%;
+        margin: 5% auto;
+        justify-content: start;
+        left: 0;
+    }
+
+/*     #heroTextArea h2, #heroTextArea h1, #heroTextArea .heroParagraph {
+        background-color: rgba(240, 240, 240, 0.6);
+    } */
+
+    .heroButton {
+        /* border: 10px solid rgba(240, 240, 240, 0.6); */
     }
 
     #heroTextArea h2 {
         font-size: 2.5em;
+        padding: 0;
+        margin: 0;
+        width: 100%;
     }
 
     h1 {
@@ -337,32 +372,51 @@ h1 .highlight:hover {
 
     .heroImagery {
         margin-right: 0%;
-
     }
 
     .teppo {
         min-width: 190px;
         right: -20px;
+        bottom: -80px;
     }
 
     .devIcon1 {
         font-size: 120px;
         right: 80px;
-        bottom: 50px;
+        bottom: 0px;
         transform: rotate(10deg);
     }
 
     .devIcon2 {
         right: 15px;
-        bottom: 45%;
+        bottom: 25%;
     }
 
     .square1 {
         right: -80px;
+        bottom: -20px;
     }
 
     .square2 {
         right: -40px;
-        bottom: -50px;
+        bottom: -80px;
+    }
+
+    .teppo-hide,
+    .square1,
+    .square2,
+    .devIcon1,
+    .devIcon2,
+    .square1-hide,
+    .square2-hide,
+    .devIcon1-hide,
+    .devIcon2-hide {
+        filter: blur(0);
+    }
+}
+
+@media (max-width: 390px) {
+    #heroTextArea h2 {
+        font-size: 2em;
     }
 }
