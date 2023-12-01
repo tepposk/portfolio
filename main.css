@@ -205,6 +205,10 @@ h3 {
     background-color: #ba6149;
 }
 
+::-webkit-scrollbar-thumb:hover {
+    background-color: #bd4324;
+}
+
 @media (max-width: 1200px) {
 
     .sectionContent {
