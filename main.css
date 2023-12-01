@@ -197,6 +197,14 @@ h3 {
     background-color: #f8dfb6;
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ba6149;
+}
+
 @media (max-width: 1200px) {
 
     .sectionContent {

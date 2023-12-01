@@ -231,14 +231,12 @@ label div:nth-child(2) {
     transition-delay: 0s;
 }
 
-#iconsWrapper {
+#someIconsWrapper {
     width: 100%;
-    position: absolute;
     display: inline-block;
-    bottom: 30px;
-    right: 37px;
     text-align: right;
-    margin-bottom: 40px;
+    margin: 0 40px 40px 0;
+    align-self: flex-end;
 }
 
 .someIcons {
