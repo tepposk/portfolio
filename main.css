@@ -223,12 +223,12 @@ h3 {
 
 @media (max-width: 768px) {
 
-    .sectionContent {
+/*     .sectionContent {
         min-height: max(40vh, 300px);
-    }
+    } */
 
     .sectionContent {
-        margin: 0 8%;
+        margin: 0 max(6%, 20px);
     }
 
     .toTopWrapper {

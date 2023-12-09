@@ -121,12 +121,8 @@
 
 @media (max-width: 768px) {
 
-    .h3Wrapper {
-        width: 60%;
-    }
-
     #projectsList {
-        margin: 8%;
+        margin: 6% 0;
     }
 
     .projectThumbnail:hover {
