@@ -1,0 +1,137 @@
+#projectsList {
+    max-width: 850px;
+    margin: 3% 25%;
+}
+
+.projectWrapper {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 10px 0px 10px;
+    margin: 10px auto 0;
+    position: relative;
+    overflow: hidden;
+    transform: translateX(200%);
+    opacity: 0;
+}
+
+.project-animation {
+    transform: translateX(0%);
+    opacity: 1;
+    transition: transform 0.3s ease-out, opacity 1s ease;
+}
+
+.titlePreview {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 1em;
+    padding: 2px 1em;
+    text-align: right;
+    right: 0;
+    bottom: 0;
+    user-select: none;
+    z-index: 3;
+    transform: scale(1);
+}
+
+.thumbnailWrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: -10px;
+    z-index: 2;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+
+.thumbnailWrapper:hover {
+    border: 10px solid #fbfbfb !important;
+}
+
+.projectThumbnail {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 -10px 0;
+    transition: 0.2s all ease-in-out;
+}
+
+.projectThumbnail:hover {
+    transform: scale(1.17)
+        /* rotate(1deg) */
+    ;
+}
+
+.projectTextWrapper {
+    padding: 10px;
+    height: 0;
+    border: 0;
+    margin: -15px -10px 0;
+    background-color: #fbfbfb;
+    position: relative;
+    transform: translateY(-100%);
+    transition: transform 0.8s ease, height 0.8s ease;
+    top: 0;
+    z-index: 1;
+    user-select: none;
+}
+
+.projectTitle {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2em;
+    color: #2F3E4C;
+    line-height: 1em;
+    margin: 0.5em 0;
+    padding: 0 3%;
+    opacity: 0;
+}
+
+.projectDescription {
+    padding: 0 3%;
+    font-size: 1em;
+}
+
+.hideDescriptionBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2F3E4C;
+    width: 100%;
+    height: 50px;
+    margin-top: 6%;
+}
+
+.hideDescriptionBtn:hover {
+    cursor: pointer;
+}
+
+.hideDescriptionBtn .arrowIcon {
+    height: 40%;
+    transform: rotateZ(180deg);
+    transition: transform 1s ease-out;
+    transition-delay: 0.1s;
+}
+
+@media (max-width: 1200px) {
+
+    #projectsList {
+        margin: 0 16%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #projectsList {
+        margin: 6% 0;
+    }
+
+    .projectThumbnail:hover {
+        transform: scale(1)
+            /* rotate(1deg) */
+        ;
+    }
+
+    .projectTitle {
+        font-size: 36px;
+    }
+}

@@ -1,35 +1,38 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import H3Wrapper from "./H3Wrapper";
+
+import ProjectContainer from "./ProjectContainer";
+
 function Projects(props) {
 
-         let paragraph = props.paragraphs[0].projects;
-
-    // Workaround to get line breaks working in the text from Firebase
-    const updatedParagraph = paragraph.split("rivinvaihto").map((item, key) => {
-        return <span key={key}>{item}<br /><br /></span>
-    });
+    const content = props.content.split("¤");
 
     return (
-        <div className="content">
-            <div id="projectsList">
-                {
-                    props.projects.map(project => {
-                        if (!project.hidden) { // Hides projects marked in the DB as hidden
-                            return (
-                                <div key={project.id}>
-                                    <div className="projectWrapper">
-                                        <Link to={"" + project.id}>
-                                            <input type="image" src={project.thumbnail} alt="" className="projectThumbnail" />
-                                        </Link>
+        <div className="sectionWrapper">
+            <H3Wrapper header={props.header} />
+            <div className="content">
+                <p className="sectionContent">{content}</p>
+                <div id="projectsList">
+                    {
+                        props.projects.map(project => {
+                            if (!project.hidden) { // Hides projects marked in Firebase as hidden
+                                return (
+                                    <div key={project.id}>
+                                        <ProjectContainer
+                                            id={project.id}
+                                            hidden={project.hidden}
+                                            thumbnail={project.thumbnail}
+                                            caption={project.caption}
+                                            paragraph={project.paragraph}
+                                            tags={project.tags}
+                                        />
                                     </div>
-                                </div>
-                            )
-                        }
-                    })
-                }
-            </div>
-            <div id="projectsParagraph">
-                {updatedParagraph}
+                                )
+                            }
+                        })
+                    }
+                </div>
+
             </div>
         </div>
     )

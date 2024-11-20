@@ -1,0 +1,254 @@
+nav {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    font-size: 1.5em;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 5% 10% 0 10%;
+    background-color: #f0f0f0;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.logo {
+    height: 100px;
+    margin-left: auto;
+    user-select: none;
+    -webkit-user-drag: none;
+    /* z-index: 2; */
+}
+
+#burgerMenu {
+    display: none;
+    z-index: 6;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+#topNavi li {
+    margin: 20px;
+}
+
+nav li .navButton {
+    color: #2F3E4C;
+    position: relative;
+    padding: 10px;
+    text-decoration: none;
+    transition: color 300ms;
+    z-index: 1;
+    user-select: none;
+}
+
+nav li .navButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #2F3E4C;
+    z-index: -1;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 130ms;
+}
+
+nav li .navButton:hover::before {
+    transform: scaleY(1);
+}
+
+nav li .navButton:hover {
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+    nav {
+        font-size: 1.3em;
+        padding: 3% 3% 0 3%;
+    }
+
+    nav li {
+        margin: 15px
+    }
+
+    .logo {
+        height: 80px
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        height: 75px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    #burgerMenu {
+        display: inline-block;
+    }
+
+    #topNavi {
+        height: 120px;
+        padding: 0;
+    }
+
+    #topNavi ul {
+        display: none
+    }
+}
+
+
+#menu_checkbox {
+    display: none;
+}
+
+
+#burgerIcon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    transition: 1s ease position;
+}
+
+label:before {
+    content: "";
+    transition: 1.2s cubic-bezier(0, 0.96, 1, 0.02);
+}
+
+label div {
+    position: relative;
+    top: 0;
+    height: 12px;
+    background-color: #2F3E4C;
+    margin-bottom: 12px;
+    transition: 0.6s ease transform, 0.6s ease top, 0.6s ease width,
+        0.6s ease right;
+    border-radius: 2px;
+    transition-delay: 0.1s;
+}
+
+label div:first-child {
+    transform-origin: 0;
+}
+
+label div:last-child {
+    margin-bottom: 0;
+    transform-origin: 60px;
+}
+
+label div:nth-child(2) {
+    right: 0;
+    width: 60px;
+}
+
+#menu_checkbox:checked+label div {
+    background-color: #fff;
+}
+
+#menu_checkbox:checked+label div:first-child {
+    top: -6px;
+    transform: rotateZ(45deg);
+}
+
+#menu_checkbox:checked+label div:last-child {
+    top: 6px;
+    transform: rotateZ(45deg);
+}
+
+#menu_checkbox:checked+label div:nth-child(2) {
+    width: 85px;
+    top: 0;
+    right: 13px;
+    transform: rotateZ(-45deg);
+}
+
+#drawer {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: #2F3E4C;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    transform: translatex(100%);
+    transition: transform 0.4s ease-in-out;
+    padding-bottom: 60px;
+}
+
+#drawer ul {
+    margin-top: -20%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    height: 30%;
+    justify-content: space-between;
+}
+
+.drawerMenuButton {
+    color: #fff;
+    font-size: 2em;
+    position: absolute;
+    left: 20%;
+    right: 0;
+    padding: 5px 30px;
+    text-decoration: none;
+    transform: translatex(200%);
+    text-align: right;
+    opacity: 0%;
+    transition: transform 0.5s ease-out, opacity 0.7s linear, color 100ms;
+}
+
+.drawerMenuButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #ba6149;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in-out;
+}
+
+.drawerMenuButton:hover::before {
+    transform: scaleX(1);
+}
+
+#drawerLogo {
+    opacity: 0%;
+    transition: transform 0.4s ease-in-out, opacity 0.8s linear;
+    transition-delay: 0s;
+}
+
+#someIconsWrapper {
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+    margin: 0 40px 40px 0;
+    align-self: flex-end;
+}
+
+.someIcons {
+    height: 40px;
+    margin: 0 12px;
+    transform: translatex(1000%);
+    position: relative;
+    opacity: 0%;
+    transition: transform 0.5s ease-in-out, opacity 0.7s linear;
+}
+
+.someIcons:hover {
+    background-color: #ba6149;
+}

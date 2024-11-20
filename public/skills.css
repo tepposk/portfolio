@@ -1,0 +1,145 @@
+.skillGroup {
+    position: relative;
+    background-color: #e6e6e6;
+    min-height: 250px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    display: flex;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.groupTitleWrapper {
+    background-color: #2f3e4c;
+    color: #fff;
+    height: 120px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -30px;
+    top: 0;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.groupTitle {
+    font-family: "Roboto Mono", monospace;
+    rotate: 270deg;
+}
+
+.skillWrapper {
+    padding: 5px 10px 10px 10px;
+    margin-bottom: 5px;
+}
+
+.skillWrapper:last-child {
+    margin-bottom: 0;
+}
+
+.skillWrapper:hover {
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+
+.skillTitles {
+    margin-right: 30px;
+    width: 10em;
+}
+
+.skillLevelWrapper {
+    background-color: #fff;
+    height: 10px;
+    width: 100%;
+}
+
+.skillLevelBar {
+    background-color: #2f3e4c;
+    height: 100%;
+    left: 0;
+    transition: width 1s ease-in-out;
+}
+
+.skill-animation {
+    width: 0% !important;
+    background-color: green;
+}
+
+.skillActive {
+    color: #ba6149;
+}
+
+.skillActive .skillLevelBar {
+    background-color: #ba6149;
+}
+
+.skillDescriptionField {
+    font-weight: 400;
+    width: 100%;
+}
+
+.skillIcons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: max(3%, 30px);
+}
+
+.skill-icon {
+    position: relative;
+    width: max(80px, 15%);
+    max-width: 100px;
+    margin: 10px;
+}
+
+.skill-icon .tooltip {
+    visibility: hidden;
+    position: absolute;
+    top: calc(100% - 5px);
+    left: 0;
+    background-color: #ba6149;
+    color: #fff;
+    font-family: "Lato", sans-serif;
+    font-size: 0.7em;
+    padding: 3px;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+}
+
+.skill-icon:hover .tooltip {
+    visibility: visible;
+}
+
+.skill-icon input {
+    width: 100%;
+}
+
+.skill-icon input:hover {
+    cursor: default;
+}
+
+@media (max-width: 768px) {
+    .skillGroup {
+        padding: 10px;
+        margin-top: 50px;
+    }
+
+    .groupTitleWrapper {
+        width: 120px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: -30px;
+        -webkit-user-drag: none;
+        user-select: none;
+    }
+
+    .groupTitle {
+        rotate: 0deg;
+    }
+}
